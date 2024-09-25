@@ -6,6 +6,10 @@ public class FinNiveau : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        GameManager.Instance.FinPartie();
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.FinPartie();
+            Destroy(collision.gameObject);
+        }
     }
 }

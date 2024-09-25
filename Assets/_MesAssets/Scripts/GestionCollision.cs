@@ -7,7 +7,7 @@ public class GestionCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!_estTouche)
+        if(!_estTouche && collision.gameObject.CompareTag("Player"))
         {
             GetComponent<MeshRenderer>().material = _materiel;
             GameManager.Instance.AugmenterPointage();
