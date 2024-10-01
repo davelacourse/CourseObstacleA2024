@@ -15,6 +15,7 @@ public class FinNiveau : MonoBehaviour
             }
             else
             {
+                GameManager.Instance.FinNiveau1();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
