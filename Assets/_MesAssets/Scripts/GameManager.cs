@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
     }
     //-------------------------------------------------
 
+    // Attributs 
     private int _pointage;
-
+    
     void Start()
     {
         _pointage = 0;

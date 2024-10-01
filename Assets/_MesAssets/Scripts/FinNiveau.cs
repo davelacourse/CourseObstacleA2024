@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinNiveau : MonoBehaviour
 {
@@ -8,8 +7,17 @@ public class FinNiveau : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.FinPartie();
-            Destroy(collision.gameObject);
+            
+            if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+            {
+                GameManager.Instance.FinPartie();
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
         }
     }
 }
