@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_MesAssets/Scenes/Niveau2.unity
     guid: c3f29918f185eed469fc454faa1fbff9
+  - enabled: 1
+    path: Assets/_MesAssets/Scenes/SceneFin.unity
+    guid: 28c35be6efcd7654192bba1604d05f7f
   m_configObjects: {}

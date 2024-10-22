@@ -7,18 +7,11 @@ public class FinNiveau : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
-            if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+            if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 2)
             {
-                GameManager.Instance.FinPartie();
-                Destroy(collision.gameObject);
+                GameManager.Instance.SetTempsFinal();
             }
-            else
-            {
-                GameManager.Instance.FinNiveau1();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
