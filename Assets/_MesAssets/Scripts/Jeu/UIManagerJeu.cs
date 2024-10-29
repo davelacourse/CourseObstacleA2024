@@ -28,13 +28,13 @@ public class UIManagerJeu : MonoBehaviour
 
     private void GestionPause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !_enPause)
+        if (Input.GetButtonDown("Pause") && !_enPause)
         {
             _panelPause.SetActive(true);
             _enPause = true;
             Time.timeScale = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && _enPause)
+        else if(Input.GetButtonDown("Pause") && _enPause)
         {
             EnleverPause();
         }
