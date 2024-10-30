@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UIManagerJeu : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class UIManagerJeu : MonoBehaviour
     {
         _panelPause.SetActive(false);
         _enPause = false;
+        EventSystem.current.SetSelectedGameObject(null);
         Time.timeScale = 1;
     }
 
